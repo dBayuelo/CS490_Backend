@@ -1,34 +1,15 @@
 <?php
 //connection variables
-$db_site = "sql1.njit.edu";
-$db_user = "db387";
-$db_pwd = "cNs9qKSwv";
-$db = "db387";
 
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 //Project Code
-//connect to database or display error
-$conn = mysqli_connect($db_site, $db_user, $db_pwd, $db);
-if (mysqli_connect_errno()){
-  echo "Failed to connect to: " . mysql_connect_error();
-}
+//File for database login information and potential error message
+//$conn is the database connection
+require 'backendDB.php';
 
 //Login permissions
 if (isset($_POST["ucid"]) AND isset($_POST["password"])){
